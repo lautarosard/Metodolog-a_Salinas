@@ -1,0 +1,12 @@
+C:\Users\Nico\Documents\SharpDevelop Projects\Pract1\Pract1\obj\Debug\Pract1.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Documents\SharpDevelop Projects\Pract1\Pract1\bin\Debug\Pract1.exe.config
+C:\Users\Nico\Documents\SharpDevelop Projects\Pract1\Pract1\bin\Debug\Pract1.exe
+C:\Users\Nico\Documents\SharpDevelop Projects\Pract1\Pract1\bin\Debug\Pract1.pdb
+C:\Users\Nico\Documents\SharpDevelop Projects\Pract1\Pract1\obj\Debug\Pract1.exe
+C:\Users\Nico\Documents\SharpDevelop Projects\Pract1\Pract1\obj\Debug\Pract1.pdb
+C:\Users\damy\OneDrive\Documentos\SharpDevelop Projects\Pract1\Pract1\obj\Debug\Pract1.csprojResolveAssemblyReference.cache
+C:\Users\damy\OneDrive\Documentos\SharpDevelop Projects\Pract1\Pract1\obj\Debug\Pract1.exe
+C:\Users\damy\OneDrive\Documentos\SharpDevelop Projects\Pract1\Pract1\bin\Debug\Pract1.exe.config
+C:\Users\damy\OneDrive\Documentos\SharpDevelop Projects\Pract1\Pract1\bin\Debug\Pract1.exe
+C:\Users\damy\OneDrive\Documentos\SharpDevelop Projects\Pract1\Pract1\bin\Debug\Pract1.pdb
+C:\Users\damy\OneDrive\Documentos\SharpDevelop Projects\Pract1\Pract1\obj\Debug\Pract1.pdb
