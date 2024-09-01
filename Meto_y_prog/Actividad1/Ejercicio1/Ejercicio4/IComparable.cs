@@ -8,12 +8,12 @@
  */
 using System;
 
-namespace Ejercicio1
+namespace Ejercicio4
 {
 	public interface IComparable
 	{
-		bool SosIgual(IComparable);
-		bool SosMenor(IComparable);
-		bool SosMayor(IComparable);
+		bool SosIgual(IComparable c);
+		bool SosMenor(IComparable c);
+		bool SosMayor(IComparable c);
 	}
 }

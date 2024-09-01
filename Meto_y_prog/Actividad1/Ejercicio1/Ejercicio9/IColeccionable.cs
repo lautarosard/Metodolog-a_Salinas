@@ -7,8 +7,9 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
 
-namespace Ejercicio4
+namespace Ejercicio9
 {
 	public interface IColeccionable
 	{

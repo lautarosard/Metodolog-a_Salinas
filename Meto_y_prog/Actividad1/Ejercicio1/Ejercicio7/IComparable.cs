@@ -8,7 +8,7 @@
  */
 using System;
 
-namespace Ejercicio1
+namespace Ejercicio7
 {
 	public interface IComparable
 	{

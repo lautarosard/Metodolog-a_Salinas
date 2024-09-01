@@ -8,25 +8,25 @@
  */
 using System;
 using System.Collections.Generic;
-using Ejercicio3;
+using Ejercicio6;
 
-namespace Ejercicio4
+namespace Ejercicio7
 {
-	public class Cola<T>:IColeccionable
+	public class Cola:IColeccionable
 	{
-		private List<T> Datos;
+		private List<IComparable> Datos;
 	//constructor	
 		public Cola()
 		{
-			 datos = new List<T>();
+			 Datos = new List<IComparable>();
 		}
 	//Propiedades
-	public void Encolar (T elem)
+	public void Encolar (IComparable elem)
 	{
 		this.Datos.Add(elem);
 	}
 	
-	public T Desencolar()
+	public IComparable Desencolar()
 	{
 		if(EsVacia())
 		{
@@ -34,13 +34,13 @@ namespace Ejercicio4
 			throw new InvalidOperationException("La cola está vacía.");	
 		}
 		else{
-			T temp = this.datos[0];
+			IComparable temp = this.Datos[0];
 			this.Datos.RemoveAt(0);
 			return temp;
 		}
 	}
 	
-	public T Tope()
+	public IComparable Tope()
 	{
 		if(EsVacia()){
 		
@@ -49,6 +49,7 @@ namespace Ejercicio4
 		
 		return this.Datos[0];
 	}
+	
 	public bool EsVacia()
 	{
 		return this.Datos.Count == 0;
@@ -66,7 +67,7 @@ namespace Ejercicio4
 		return Datos.Count;
 	}
 	
-	public IComparable Minimo(IComparable C)
+	public IComparable Minimo()
 	{
 		IComparable min = Datos[0];
 		foreach (IComparable com in Datos)
@@ -76,8 +77,10 @@ namespace Ejercicio4
 				min=com;
 			}
 		}
+		return min;
 	}
-	public IComparable Maximo(IComparable C)
+	
+	public IComparable Maximo()
 	{
 		IComparable max = Datos[0];
 		foreach (IComparable com in Datos)
@@ -87,6 +90,7 @@ namespace Ejercicio4
 				max = com;
 			}
 		}
+		return max;
 	}
 	
 	public void Agregar(IComparable m)
@@ -99,7 +103,7 @@ namespace Ejercicio4
 	{
 		foreach (IComparable com in Datos)
 		{
-			if (com.sosIgual(m))
+			if (com.SosIgual(m))
 			{
 				return true;
 			}

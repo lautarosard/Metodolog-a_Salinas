@@ -9,7 +9,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Ejercicio4
+namespace Ejercicio8
 {
 	public class Pila:IColeccionable
 	{

@@ -8,7 +8,7 @@
  */
 using System;
 
-namespace Ejercicio4
+namespace Ejercicio5
 {
 	public interface IColeccionable
 	{

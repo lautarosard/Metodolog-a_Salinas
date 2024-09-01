@@ -14,7 +14,7 @@ namespace Ejercicio3
 	{
 		int Cuantos();
 		int Minimo();
-		List<IComparable<t>> Agregar(IComparable);
-		bool Contiene(IComparable);
+		void Agregar(IComparable c);
+		bool Contiene(IComparable c);
 	}
 }
