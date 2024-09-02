@@ -22,7 +22,7 @@ namespace Ejercicio12
 		//Metodos
 		public bool SosMenor(IComparable C)
 		{ 
-			if (this.dni < (((Persona)C).Dni()))
+			if (this.dni < (((Persona)C).Dni))
 			{
 				return true;
 			}else
@@ -31,7 +31,7 @@ namespace Ejercicio12
 			}
 		}
 			
-		public bool SosMayor(IComparable c)
+		public bool SosMayor(IComparable C)
 		{
 			if (this.dni > (((Persona)C).Dni))
 			{
@@ -42,7 +42,7 @@ namespace Ejercicio12
 			}
 		}
 
-		public bool SosIgual(IComparable c)
+		public bool SosIgual(IComparable C)
 		{
 			if(this.dni == (((Persona)C).Dni))
 			{

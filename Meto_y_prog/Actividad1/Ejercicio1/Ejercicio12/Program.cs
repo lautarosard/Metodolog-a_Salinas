@@ -18,14 +18,19 @@ namespace Ejercicio12
 		{
 			Cola C1 = new Cola();
 			llenarPersonas(C1);
-			
+			while(!C1.EsVacia())
+			{
+				
+				Persona Person = (Persona)C1.Desencolar();
+				Console.WriteLine("Nombre: " + Person.Nombre + " DNI: " + Person.Dni);
+			}
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
 		
 		public static void llenarPersonas(IColeccionable coleccion)
 		{
-			string[] abc= new String[]{'A','B','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T'};
+			string[] abc= new String[]{"A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X"};
 			int lg=abc.Length;
 			int dni=45308380;
 			Random Ram= new Random();
