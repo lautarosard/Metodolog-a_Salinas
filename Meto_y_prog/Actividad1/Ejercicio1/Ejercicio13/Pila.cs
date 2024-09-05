@@ -1,15 +1,7 @@
-﻿/*
- * Created by SharpDevelop.
- * User: lauta
- * Date: 30/08/2024
- * Time: 04:18 p. m.
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Ejercicio9
+namespace Ejercicio13
 {
 	public class Pila:IColeccionable
 	{
@@ -39,7 +31,7 @@ namespace Ejercicio9
 		return Datos.Count;
 	}
 	
-	public IComparable Minimo(IComparable C)
+	public IComparable Minimo()
 	{
 		IComparable min = Datos[0];
 		foreach (IComparable com in Datos)
@@ -49,8 +41,9 @@ namespace Ejercicio9
 				min=com;
 			}
 		}
+		return min;
 	}
-	public IComparable Maximo(IComparable C)
+	public IComparable Maximo()
 	{
 		IComparable max = Datos[0];
 		foreach (IComparable com in Datos)
@@ -60,6 +53,7 @@ namespace Ejercicio9
 				max = com;
 			}
 		}
+		return max;
 	}
 	
 	public void Agregar(IComparable m)
@@ -72,7 +66,7 @@ namespace Ejercicio9
 	{
 		foreach (IComparable com in Datos)
 		{
-			if (com.sosIgual(m))
+			if (com.SosIgual(m))
 			{
 				return true;
 			}

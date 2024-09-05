@@ -1,0 +1,5 @@
+C:\Users\lauta\OneDrive\Documentos\Facultad\Meto_y_prog\Actividad1\Ejercicio1\Ejercicio18\obj\Debug\Ejercicio18.csprojResolveAssemblyReference.cache
+C:\Users\lauta\OneDrive\Documentos\Facultad\Meto_y_prog\Actividad1\Ejercicio1\Ejercicio18\bin\Debug\Ejercicio18.exe
+C:\Users\lauta\OneDrive\Documentos\Facultad\Meto_y_prog\Actividad1\Ejercicio1\Ejercicio18\bin\Debug\Ejercicio18.pdb
+C:\Users\lauta\OneDrive\Documentos\Facultad\Meto_y_prog\Actividad1\Ejercicio1\Ejercicio18\obj\Debug\Ejercicio18.exe
+C:\Users\lauta\OneDrive\Documentos\Facultad\Meto_y_prog\Actividad1\Ejercicio1\Ejercicio18\obj\Debug\Ejercicio18.pdb
