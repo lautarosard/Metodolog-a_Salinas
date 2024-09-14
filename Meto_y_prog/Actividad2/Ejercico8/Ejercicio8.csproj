@@ -45,15 +45,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno.cs" />
     <Compile Include="ClaveValor.cs" />
     <Compile Include="Cola.cs" />
+    <Compile Include="CompararDni.cs" />
     <Compile Include="Conjunto.cs" />
     <Compile Include="Diccionario.cs" />
     <Compile Include="IColeccionable.cs" />
     <Compile Include="IComparable.cs" />
+    <Compile Include="IEstrategiaComparacion.cs" />
     <Compile Include="IIterable.cs" />
     <Compile Include="IIterador.cs" />
     <Compile Include="IteradorLista.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Pila.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

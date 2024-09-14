@@ -45,11 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno.cs" />
     <Compile Include="FabricaDeComparables.cs" />
     <Compile Include="FabricaDeNumeros.cs" />
+    <Compile Include="FabricaDePersonas.cs" />
+    <Compile Include="FabricasDeAlumnos.cs" />
     <Compile Include="GeneradorDeDatosAleateorio.cs" />
     <Compile Include="IComparable.cs" />
     <Compile Include="Numero.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,6 +3,8 @@
  * Date: 11/9/2024
  */
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Ejercicio8
 {
@@ -41,8 +43,8 @@ namespace Ejercicio8
 			for (int i=1;i<=20;i++)
 			{
 				//Numeros random para promedio
-				int n1 = Ram.Next(20);
-				int n2 = Ram.Next(20);
+				int n1 = Ram.Next(1,10);
+				int n2 = Ram.Next(1,10);
 				Promedio = (n1 + n2)/2;
 				//Me da numero aleatorios con limite del array de abc
 				int ind1=Ram.Next(lg);
@@ -58,16 +60,18 @@ namespace Ejercicio8
 					
 				string nombre = nombresBuild.ToString();
 				Alumno Alu = new Alumno(nombre,dni+i,legajo,Promedio);
-				coleccion.Agregar(Alu);
+				colec.Agregar(Alu);
 			}
 		
 		}
-		public void imprimirElementos(IIterador m)
+		public static void imprimirElemento(IIterable m)
 		{
-			if(!m.fin())
+			IIterador ite = m.crearIterador();
+			ite.primero();
+			while(!ite.fin())
 			{
-				Console.WriteLine(m.actual());
-				m.siguiente();
+				Console.WriteLine(ite.actual());
+				ite.siguiente();
 			}
 			
 		}

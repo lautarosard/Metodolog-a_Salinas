@@ -21,25 +21,26 @@ namespace Ejercicio8
 			ClaveValor claveVal = new ClaveValor(clave,valor);
 			if(!Contiene(claveVal))
 			{
-				elementos.Add(claveVal);
+				elementos.agregar(claveVal);
 			}else
 			{
 				Console.WriteLine("El elemento ya esta en la lista");
 			}
 		}
-		private void Agregar(IComparable m)
+		public void Agregar(IComparable m)
 		{
 			
 		}
 		public IComparable ValorDe(int clave)
 		{
-			foreach(ClaveValor cl in elementos)
+			foreach(ClaveValor cl in elementos.Elementos)
 			{
 				if(cl.Clave == clave)
 				{
 					return cl.Valor;
 				}
 			}
+			return null;
 		}
 		//metodos Icollec
 	
@@ -58,7 +59,7 @@ namespace Ejercicio8
 			return elementos.Maximo();
 		}
 		
-		private bool Contiene(IComparable m)
+		public bool Contiene(IComparable m)
 		{
 			return elementos.pertenece(m);
 			
@@ -67,7 +68,7 @@ namespace Ejercicio8
 		//Metodo Iterable
 		public IIterador crearIterador()
 		{
-			return new IteradorLista(elementos);
+			return new IteradorLista(elementos.Elementos);
 		}
 	}
 }

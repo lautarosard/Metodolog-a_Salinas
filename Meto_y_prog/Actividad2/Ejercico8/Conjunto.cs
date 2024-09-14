@@ -15,6 +15,7 @@ namespace Ejercicio8
 		private List<IComparable> elementos;
 		public Conjunto()
 		{
+			elementos = new List<IComparable>();
 		}
 		//Metodo
 		public void agregar(IComparable elem)
@@ -61,13 +62,13 @@ namespace Ejercicio8
 			return max;
 		}
 		
-		private void Agregar(IComparable m)
+		public void Agregar(IComparable m)
 		{
 			elementos.Add(m);
 			
 		}
 		
-		private bool Contiene(IComparable m)
+		public bool Contiene(IComparable m)
 		{
 			foreach (IComparable com in elementos)
 			{
@@ -84,10 +85,10 @@ namespace Ejercicio8
 		{
 			return new IteradorLista(elementos);
 		}
-		//popriedades
-		public IComparable Elementos()
+		//propiedades
+		public List<IComparable> Elementos
 		{
-			get{return elementos;}
+			get {return elementos;}
 		}
 	}
 }

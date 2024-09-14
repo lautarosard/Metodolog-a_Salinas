@@ -19,6 +19,11 @@ namespace Ejercicio4
 		{
 			return new Numero(Generador.numeroAleatorio(100))
 		}
-		
+		public override IComparable crearPorTeclado()
+		{
+			Console.Write("INGRESE UN NÚMERO: ");
+			int n = Console.ReadKey();
+			Numero num = new Numero(n);
+		}
 	}
 }
