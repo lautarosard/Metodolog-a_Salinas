@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ejercicio9
+namespace Ejercicio13
 {
 	public class Persona:IComparable
 	{

@@ -1,11 +1,12 @@
 ﻿using System;
 
-namespace Ejercicio9
+namespace Ejercicio6
 {
 	public class Persona:IComparable
 	{
-		private string nombre;
-		private int dni;
+		protected string nombre;
+		protected int dni;
+		
 		public Persona(string nombre, int dni)
 		{
 			this.nombre=nombre;
@@ -14,37 +15,18 @@ namespace Ejercicio9
 		//Metodos
 		public virtual bool SosMenor(IComparable C)
 		{ 
-			if (this.dni < (((Persona)C).Dni))
-			{
-				return true;
-			}else
-			{
-				return false;
-			}
+			return this.dni < (((Persona)C).Dni);
 		}
 			
 		public virtual bool SosMayor(IComparable C)
 		{
-			if (this.dni > (((Persona)C).Dni))
-			{
-				return true;
-			}else
-			{
-				return false;
-			}
+			return this.dni > (((Persona)C).Dni);
 		}
 
 		public virtual bool SosIgual(IComparable C)
 		{
-			if(this.dni == (((Persona)C).Dni))
-			{
-				return true;
-			}else
-			{
-				return false;
-			}
+			return this.dni == (((Persona)C).Dni);
 		}
-		
 		 public override string ToString()
     	{
         	return "Nombre: " + nombre + " DNI: " + dni;

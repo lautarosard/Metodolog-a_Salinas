@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <ProjectGuid>{C7487B8F-5D0A-43BA-ABED-79E23116829D}</ProjectGuid>
+    <ProjectGuid>{DF9A5BF3-FCAA-44B4-955F-9E017A18BBA2}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio9</RootNamespace>
-    <AssemblyName>Ejercicio9</AssemblyName>
+    <RootNamespace>Ejercicio6</RootNamespace>
+    <AssemblyName>Ejercicio6</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -45,16 +45,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno.cs" />
     <Compile Include="Cola.cs" />
+    <Compile Include="CompararDni.cs" />
+    <Compile Include="FabricaDeColas.cs" />
+    <Compile Include="FabricaDeColecciones.cs" />
     <Compile Include="FabricaDeComparables.cs" />
-    <Compile Include="FabricaDeProfesores.cs" />
+    <Compile Include="FabricaDeNumeros.cs" />
+    <Compile Include="FabricaDePersonas.cs" />
     <Compile Include="FabricasDeAlumnos.cs" />
+    <Compile Include="GeneradorDeDatosAleateorio.cs" />
+    <Compile Include="IColeccionable.cs" />
     <Compile Include="IComparable.cs" />
+    <Compile Include="IEstrategiaComparacion.cs" />
     <Compile Include="IIterable.cs" />
     <Compile Include="IIterador.cs" />
     <Compile Include="IteradorLista.cs" />
+    <Compile Include="Numero.cs" />
     <Compile Include="Persona.cs" />
-    <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
