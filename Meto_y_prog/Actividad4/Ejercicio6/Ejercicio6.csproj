@@ -51,6 +51,11 @@
     <Compile Include="Cola.cs" />
     <Compile Include="CompararDni.cs" />
     <Compile Include="ConLegajo.cs" />
+    <Compile Include="Estrategias\CompararDni.cs" />
+    <Compile Include="Estrategias\CompararLegajo.cs" />
+    <Compile Include="Estrategias\CompararNombre.cs" />
+    <Compile Include="Estrategias\CompararPromedio.cs" />
+    <Compile Include="Estrategias\IEstrategiaComparacion.cs" />
     <Compile Include="IAlumno.cs" />
     <Compile Include="IColeccionable.cs" />
     <Compile Include="IComparable.cs" />
@@ -63,6 +68,9 @@
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Estrategias" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

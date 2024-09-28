@@ -6,7 +6,7 @@ using System;
 using Ejercicio3;
 
 
-namespace Ejercicio3
+namespace Ejercicio6
 {
 	/// <summary>
 	/// Description of AlumnoAdapter.

@@ -20,24 +20,18 @@ namespace Ejercicio4
 		}
 		public bool sosIgual(IPersona Alu1,  IPersona Alu2)
 		{
-			Alumno alu1 = (Alumno)Alu1;
-			Alumno alu2 = (Alumno)Alu2;
 			//Comparar por nombres
-			return alu1.Legajo == alu2.Legajo;
+			return (Alumno)Alu1.Legajo == (Alumno)Alu2.Legajo;
 		}
 		public bool sosMayor(IPersona Alu1,  IPersona Alu2)
 		{
-			Alumno alu1 = (Alumno)Alu1;
-			Alumno alu2 = (Alumno)Alu2;
 			//Comparar por nombres
-			return alu1.Legajo < alu2.Legajo;
+			return (Alumno)Alu1.Legajo < (Alumno)Alu2.Legajo;
 		}
 		public bool sosMenor(IPersona Alu1,  IPersona Alu2)
 		{
-			Alumno alu1 = (Alumno)Alu1;
-			Alumno alu2 = (Alumno)Alu2;
 			//Comparar por nombres
-			return alu1.Legajo > alu2.Legajo;
+			return (Alumno)Alu1.Legajo > (Alumno)Alu2.Legajo;
 		}
 	}
 }
