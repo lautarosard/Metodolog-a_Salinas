@@ -12,9 +12,9 @@ namespace Ejercicio4
 {
 	public interface IEstrategiaComparacion
 	{
-		bool sosIgual(Alumno Alu1,  Alumno Alu2);
-		bool sosMayor(Alumno Alu1,  Alumno Alu2);
-		bool sosMenor(Alumno Alu1,  Alumno Alu2);
+		bool sosIgual(IPersona Alu1, IPersona Alu2);
+		bool sosMayor(IPersona Alu1, IPersona Alu2);
+		bool sosMenor(IPersona Alu1, IPersona Alu2);
 		
 	}
 }

@@ -25,13 +25,13 @@ namespace Ejercicio4
 			switch(opcion)
 			{
 				case 1:
-					fabrica = new FabricaDeNumeros();
-					break;
-				case 2:
 					fabrica = new FabricasDeAlumnos();
 					break;
-				case 3:
+				case 2:
 					fabrica = new FabricaDeProfesores();
+					break;
+				case 3:
+					fabrica = new FabricaDeAlumnosMuyEstudiosos();
 					break;
 				default:	
 					break;
@@ -45,7 +45,7 @@ namespace Ejercicio4
 			switch(opcion)
 			{
 				case 1:
-					fabrica = new FabricaDeNumeros();
+					fabrica = new FabricaDeAlumnosMuyEstudiosos();
 					break;
 				case 2:
 					fabrica = new FabricasDeAlumnos();

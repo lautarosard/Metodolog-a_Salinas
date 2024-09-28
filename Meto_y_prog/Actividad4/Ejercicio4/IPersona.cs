@@ -10,11 +10,8 @@ namespace Ejercicio4
 	/// Description of IPersona.
 	/// </summary>
 	public interface IPersona
-	{
-		string nombre;
-		int dni;
-		bool SosMenor(IComparable C);
-		bool SosMayor(IComparable C);
-		bool SosIgual(IComparable C)
+	{ 
+		string Nombre{get;set;}
+		int Dni{get;set;}
 	}
 }

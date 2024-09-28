@@ -18,6 +18,12 @@ namespace Ejercicio4
 		{
 			this.alu=alu;
 		}
+		
+		public Alumno getAlumno()
+		{
+			return alu;
+		}
+		
 		public string getName()
 		{
 			return alu.Nombre;
@@ -29,7 +35,7 @@ namespace Ejercicio4
 		}
 		public void setScore(int score)
 		{
-			alu.calificacion(score);
+			alu.Calificacion = score;
 		}
 		public string showResult()
 		{
@@ -37,14 +43,17 @@ namespace Ejercicio4
 		}
 		public bool equals(Student student)
 		{
+			Alumno student = ((AlumnoAdapter)student).getAlumno();
 			return alu.SosIgual(student);
 		}
 		public bool lessThan(Student student)
 		{
+			Alumno student = ((AlumnoAdapter)student).getAlumno();
 			return alu.SosMenor(student);
 		}
 		public bool greaterThan(Student student)
 		{
+			Alumno student = ((AlumnoAdapter)student).getAlumno();
 			return alu.SosMayor(student);
 		}
 	}

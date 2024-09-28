@@ -35,22 +35,22 @@ namespace Ejercicio4
 		//Metodos de iComparable
 		public override bool SosIgual(IComparable C)
 		{
-			return Estrategia.sosIgual(this,(Persona)C);
+			return Estrategia.sosIgual(this,C);
 		}
 		
 		public override bool SosMenor(IComparable C)
 		{
 			Profesor profe = (Profesor)C;
-			return Estrategia.sosMenor(this,(Persona)C);
+			return Estrategia.sosMenor(this,C);
 		}
 		
 		public override bool SosMayor(IComparable C)
 		{
 			Profesor profe = (Profesor)C;
-			return Estrategia.sosMayor(this,(Persona)C);
+			return Estrategia.sosMayor(this,C);
 		}
 		//metodos observador
-		public void agregarObsevador(IObservador observador)
+		public void agregarObservador(IObservador observador)
 		{
 			this.observadores.Add(observador);
 		}

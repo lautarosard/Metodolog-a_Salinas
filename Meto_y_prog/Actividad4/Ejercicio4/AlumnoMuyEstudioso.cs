@@ -4,12 +4,12 @@
  */
 using System;
 
-namespace Ejercicio2
+namespace Ejercicio4
 {
 	/// <summary>
 	/// Description of AlumnoMuyEstudioso.
 	/// </summary>
-	public class AlumnoMuyEstudioso:
+	public class AlumnoMuyEstudioso:Alumno
 	{
 		public AlumnoMuyEstudioso(string Nombre, int Dni, int Legajo, double Promedio):base(Nombre,Dni,Legajo,Promedio)
 		{

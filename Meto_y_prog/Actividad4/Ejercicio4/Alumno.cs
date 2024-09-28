@@ -7,37 +7,47 @@ namespace Ejercicio4
 	/// <summary>
 	/// Subclase de Persona
 	/// </summary>
-	public class Alumno:IPersona, IObservador
+	public class Alumno:IPersona, IObservador,IComparable
 	{
-		private int Legajo;
-		private double Promedio;
+		
+		private string nombre;
+		private int dni;
+		private int legajo;
+		private double promedio;
 		private int calificacion;
 		private IEstrategiaComparacion Estrategia;
 		//constructor
-		public Alumno(string Nombre, int Dni, int Legajo, double Promedio):base(Nombre, Dni)
+		public Alumno(string Nombre, int Dni, int Legajo, double Promedio)
 		{
 			this.Legajo = Legajo;
 			this.Promedio = Promedio;
 			this.Estrategia = new CompararDni();
 		}
 		//propiedades
-		public int legajo
+		public int Legajo
 		{
-			get{return this.Legajo;}
-			set{this.Legajo = value;}
+			get{return this.legajo;}
+			set{this.legajo = value;}
 		}
-		public double promedio
+		public double Promedio
 		{
-			get{return this.Promedio;}
-			set{this.Promedio = value;}
+			get{return this.promedio;}
+			set{this.promedio = value;}
 		}
-		public int calificacion
+		public int Calificacion
 		{
 			get{return this.calificacion;}
 			set{this.calificacion = value;}
 		}
 		
-		
+		public string Nombre{
+			get{return nombre;}
+			set{this.nombre = value;}
+		}
+		public int Dni{
+			get{return dni;}
+			set{this.dni = value;}
+		}
 		public void SetEstrategia(IEstrategiaComparacion Estrategia)
 		{
 			this.Estrategia = Estrategia;
@@ -46,22 +56,22 @@ namespace Ejercicio4
 		//metodo para imprimir en forma de string un obj. Alumno
 		public override string ToString()
     	{
-         	return "Nombre: " + Nombre + " DNI: " + Dni + " Legajo: " + Legajo + " Promedio: " + Promedio;
+         	return "Nombre: " + Nombre + " DNI: " + Dni + " Legajo: " + Legajo + " Promedio: " + Promedio + "Calificación: " + calificacion;
     	}
 		//Reimplementación de metodos
-		public override bool SosIgual(IComparable C)
+		public bool SosIgual(IComparable C)
 		{
 			Alumno alu = (Alumno)C;
 			return Estrategia.sosIgual(this,alu);
 		}
 		
-		public override bool SosMenor(IComparable C)
+		public bool SosMenor(IComparable C)
 		{
 			Alumno alu = (Alumno)C;
 			return Estrategia.sosMenor(this,alu);
 		}
 		
-		public override bool SosMayor(IComparable C)
+		public bool SosMayor(IComparable C)
 		{
 			Alumno alu = (Alumno)C;
 			return Estrategia.sosMayor(this,alu);
@@ -105,7 +115,7 @@ namespace Ejercicio4
 		}
 		public string motrarCalificacion()
 		{
-			return this.Nombre + (String)this.calificacion;
+			return this.Nombre + this.calificacion;
 		}
 	}
 }

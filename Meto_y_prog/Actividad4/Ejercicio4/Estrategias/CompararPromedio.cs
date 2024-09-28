@@ -4,7 +4,7 @@
  * Date: 6/9/2024
  * Time: 12:10
  * 
- * To change Alu1 template use Tools | Options | Coding | Edit Standard Headers.
+ * To change (Alumno)Alu1 template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 
@@ -18,20 +18,20 @@ namespace Ejercicio4
 		public CompararPromedio()
 		{
 		}
-		public bool sosIgual(Alumno Alu1,  Alumno Alu2)
+		public bool sosIgual( IPersona Alu1, IPersona Alu2)
 		{
 			//Comparar por nombres
-			return Alu1.promedio == Alu2.promedio;
+			return (Alumno)Alu1.Promedio == (Alumno)Alu2.Promedio;
 		}
-		public bool sosMayor(Alumno Alu1,  Alumno Alu2)
+		public bool sosMayor( IPersona Alu1, IPersona Alu2)
 		{
 		    //Comparar por nombres
-			return Alu1.promedio < Alu2.promedio;
+			return (Alumno)Alu1.Promedio < (Alumno)Alu2.Promedio;
 		}
-		public bool sosMenor(Alumno Alu1,  Alumno Alu2)
+		public bool sosMenor( IPersona Alu1, IPersona Alu2)
 		{
 			//Comparar por nombres
-			return Alu1.promedio > Alu2.promedio;
+			return (Alumno)Alu1.Promedio > (Alumno)Alu2.Promedio;
 		}
 	}
 }

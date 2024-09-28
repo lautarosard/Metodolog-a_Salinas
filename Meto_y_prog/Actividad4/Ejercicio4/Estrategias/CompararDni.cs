@@ -19,17 +19,17 @@ namespace Ejercicio4
 		public CompararDni()
 		{
 		}
-		public bool sosIgual(Alumno Alu1,Alumno Alu2)
+		public bool sosIgual(IPersona Alu1, IPersona Alu2)
 		{
 			//Comparar por nombres
 			return Alu1.Dni == Alu2.Dni;
 		}
-		public bool sosMayor(Alumno Alu1,Alumno Alu2)
+		public bool sosMayor(IPersona Alu1, IPersona Alu2)
 		{
 			//Comparar por nombres
 			return Alu1.Dni < Alu2.Dni;
 		}
-		public bool sosMenor(Alumno Alu1,Alumno Alu2)
+		public bool sosMenor(IPersona Alu1, IPersona Alu2)
 		{
 			//Comparar por nombres
 			return Alu1.Dni > Alu2.Dni;

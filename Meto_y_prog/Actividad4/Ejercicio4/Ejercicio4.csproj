@@ -53,6 +53,7 @@
     <Compile Include="Estrategias\CompararNombre.cs" />
     <Compile Include="Estrategias\CompararPromedio.cs" />
     <Compile Include="Estrategias\IEstrategiaComparacion.cs" />
+    <Compile Include="Fabricas\FabricaDeAlumnosMuyEstudiosos.cs" />
     <Compile Include="Fabricas\FabricaDeComparables.cs" />
     <Compile Include="Fabricas\FabricaDeProfesores.cs" />
     <Compile Include="Fabricas\FabricasDeAlumnos.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="IComparable.cs" />
     <Compile Include="IIterable.cs" />
     <Compile Include="IIterador.cs" />
+    <Compile Include="IObservador.cs" />
     <Compile Include="IObsevado.cs" />
     <Compile Include="IPersona.cs" />
     <Compile Include="IteradorLista.cs" />
