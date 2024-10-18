@@ -12,7 +12,7 @@ namespace Ejercicio6
 	public interface IObservado
 	{
 		void agregarObservador(IObservador O);
-		void quitarObervador(IObservador O);
+		void quitarObservador(IObservador O);
 		void notificar();
 	}
 }

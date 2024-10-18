@@ -7,18 +7,31 @@ using System.Collections.Generic;
 
 namespace Ejercicio4
 {
-	public class Profesor:Persona, IObservado
+	public class Profesor:IPersona, IObservado, IComparable
 	{
 		private int antiguedad;
 		private bool hablando;
+		private int dni;
+		private string nombre;
 		private List<IObservador> observadores = new List<IObservador>();
 		private IEstrategiaComparacion Estrategia;
 		//
-		public Profesor(string nombre, int dni, int antiguedad):base(nombre,dni)
+		public Profesor(string nombre, int dni, int antiguedad)
 		{
 			this.antiguedad=antiguedad;
 			this.Estrategia = new CompararDni();
 			
+		}
+		//PROPIEDADES
+		public int Dni
+		{
+			get{return dni;}
+			set{dni = value;}
+		}
+		public string Nombre
+		{
+			get{return nombre;}
+			set{nombre = value;}
 		}
 		//Metodos
 		public void hablarEnClase()
@@ -33,21 +46,21 @@ namespace Ejercicio4
 			Console.WriteLine("Escribiendo en el pizarrón");
 		}
 		//Metodos de iComparable
-		public override bool SosIgual(IComparable C)
+		public bool SosIgual(IComparable C)
 		{
-			return Estrategia.sosIgual(this,C);
+			return Estrategia.sosIgual(this,(IPersona)C);
 		}
 		
-		public override bool SosMenor(IComparable C)
+		public bool SosMenor(IComparable C)
 		{
 			Profesor profe = (Profesor)C;
-			return Estrategia.sosMenor(this,C);
+			return Estrategia.sosMenor(this,(IPersona)C);
 		}
 		
-		public override bool SosMayor(IComparable C)
+		public bool SosMayor(IComparable C)
 		{
 			Profesor profe = (Profesor)C;
-			return Estrategia.sosMayor(this,C);
+			return Estrategia.sosMayor(this,(IPersona)C);
 		}
 		//metodos observador
 		public void agregarObservador(IObservador observador)

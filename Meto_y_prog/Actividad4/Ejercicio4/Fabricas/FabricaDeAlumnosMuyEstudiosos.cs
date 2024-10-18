@@ -26,7 +26,7 @@ namespace Ejercicio4
 			Dni= Dniran.Next(44500900,48800900);
 			Legajo=ram.numeroAleatorio(4000);
 			Promedio = (ram.numeroAleatorio(10)+ram.numeroAleatorio(10))/2;
-			return new Alumno(Nombre,Dni,Legajo,Promedio);
+			return new AlumnoMuyEstudioso(Nombre,Dni,Legajo,Promedio);
 		}
 		public override IComparable crearPorTeclado()
 		{
@@ -46,7 +46,7 @@ namespace Ejercicio4
 			Console.WriteLine();
 			Console.Write("Ingrese su Promedio: ");
 			Promedio = int.Parse(Console.ReadLine());
-			return new Alumno(Nombre,Dni,Legajo,Promedio);
+			return new AlumnoMuyEstudioso(Nombre,Dni,Legajo,Promedio);
 		}
 	}
 }

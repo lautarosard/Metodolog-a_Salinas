@@ -55,7 +55,7 @@ namespace Ejercicio6
 			return elementos.Maximo();
 		}
 		
-		private bool Contiene(ClaveValor m)
+		private bool Contiene(IComparable m)
 		{
 			return elementos.pertenece(m);
 			

@@ -8,13 +8,13 @@
  */
 using System;
 
-namespace Ejercicio6
+namespace Ejercicio8
 {
 	public interface IEstrategiaComparacion
 	{
-		bool sosIgual(Alumno Alu1,  Alumno Alu2);
-		bool sosMayor(Alumno Alu1,  Alumno Alu2);
-		bool sosMenor(Alumno Alu1,  Alumno Alu2);
+		bool sosIgual(IAlumno Alu1, IAlumno Alu2);
+		bool sosMayor(IAlumno Alu1, IAlumno Alu2);
+		bool sosMenor(IAlumno Alu1, IAlumno Alu2);
 		
 	}
 }

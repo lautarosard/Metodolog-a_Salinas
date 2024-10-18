@@ -9,7 +9,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Ejercicio6
+namespace Ejercicio8
 {
 	/// <summary>
 	/// Description of CompararDni.
@@ -19,17 +19,17 @@ namespace Ejercicio6
 		public CompararDni()
 		{
 		}
-		public bool sosIgual(Alumno Alu1,Alumno Alu2)
+		public bool sosIgual(IAlumno Alu1, IAlumno Alu2)
 		{
 			//Comparar por nombres
 			return Alu1.Dni == Alu2.Dni;
 		}
-		public bool sosMayor(Alumno Alu1,Alumno Alu2)
+		public bool sosMayor(IAlumno Alu1, IAlumno Alu2)
 		{
 			//Comparar por nombres
 			return Alu1.Dni < Alu2.Dni;
 		}
-		public bool sosMenor(Alumno Alu1,Alumno Alu2)
+		public bool sosMenor(IAlumno Alu1, IAlumno Alu2)
 		{
 			//Comparar por nombres
 			return Alu1.Dni > Alu2.Dni;

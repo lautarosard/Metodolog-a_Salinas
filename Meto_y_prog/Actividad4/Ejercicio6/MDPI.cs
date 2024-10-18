@@ -10,7 +10,7 @@
  
 using System;
 using System.Collections.Generic;
-using Ejercicio3;
+using Ejercicio6;
 
 namespace Ejercicio6
 {

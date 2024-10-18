@@ -30,7 +30,7 @@ namespace Ejercicio4
 			Alumno alu1 = (Alumno)Alu1;
 			Alumno alu2 = (Alumno)Alu2;
 		    //Comparar por nombres
-			return Alu1.Promedio < Alu2.Promedio;
+			return alu1.Promedio < alu2.Promedio;
 		}
 		public bool sosMenor( IPersona Alu1, IPersona Alu2)
 		{

@@ -3,7 +3,7 @@
  * Date: 14/9/2024
  */
 using System;
-using Ejercicio3;
+using Ejercicio6;
 
 
 namespace Ejercicio6
@@ -13,11 +13,17 @@ namespace Ejercicio6
 	/// </summary>
 	public class AlumnoAdapter:Student
 	{
-		Alumno alu;
-		public AlumnoAdapter(Alumno alu)
+		IAlumno alu;
+		public AlumnoAdapter(IAlumno alu)
 		{
 			this.alu=alu;
 		}
+		
+		public IAlumno getAlumno()
+		{
+			return alu;
+		}
+		
 		public string getName()
 		{
 			return alu.Nombre;
@@ -25,27 +31,30 @@ namespace Ejercicio6
 		
 		public int yourAnswerIs(int question)
 		{
-			
+			return alu.responderPregunta(question);
 		}
 		public void setScore(int score)
 		{
-			alu.calificacion(score);
+			alu.Calificacion = score;
 		}
 		public string showResult()
 		{
-			alu.calificacion;
+			return alu.motrarCalificacion();
 		}
 		public bool equals(Student student)
 		{
-			
+			IAlumno stu = ((AlumnoAdapter)student).getAlumno();
+			return alu.SosIgual(stu);
 		}
 		public bool lessThan(Student student)
 		{
-			
+			IAlumno stu = ((AlumnoAdapter)student).getAlumno();
+			return alu.SosMenor(stu);
 		}
 		public bool greaterThan(Student student)
 		{
-			
+			IAlumno stu = ((AlumnoAdapter)student).getAlumno();
+			return alu.SosMayor(stu);
 		}
 	}
 }

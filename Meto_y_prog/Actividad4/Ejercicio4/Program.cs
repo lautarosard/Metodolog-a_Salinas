@@ -11,7 +11,8 @@ namespace Ejercicio4
 		public static void Main(string[] args)
 		{
 			Teacher teacher = new Teacher();
-			
+			fill(teacher);
+			teacher.teachingAClass();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
@@ -20,16 +21,24 @@ namespace Ejercicio4
 		{
 			for(int i = 0;i<20;i++)
 			{
-				if(i<=10)
+				if(i < 10)
 				{
-					IComparable stuAdapt =(Alumno) FabricaDeComparables.crearAleatorio(1);
-					AlumnoAdapter student= new AlumnoAdapter(stuAdapt);
-					teach.goToClass((Student)student);
+					Alumno stuAdapt = (Alumno)FabricaDeComparables.crearAleatorio(1);
+					if (stuAdapt !=null)
+					{
+						AlumnoAdapter student= new AlumnoAdapter(stuAdapt);
+						Console.WriteLine("get nombre: "+ stuAdapt.Nombre);
+						teach.goToClass(student);	
+					}
+					
 				}else
 				{
-					IComparable stuAdapt = (AlumnoMuyEstudioso)FabricaDeComparables.crearAleatorio(3);
-					AlumnoAdapter student= new AlumnoAdapter(stuAdapt);
-					teach.goToClass((Student)student);
+					AlumnoMuyEstudioso stuAdapt = (AlumnoMuyEstudioso)FabricaDeComparables.crearAleatorio(3);
+					if (stuAdapt != null)
+					{
+						AlumnoAdapter student= new AlumnoAdapter(stuAdapt);
+						teach.goToClass((Student)student);	
+					}
 				}
 			}
 		}

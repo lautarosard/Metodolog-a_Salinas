@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <ProjectGuid>{F00C75C2-2105-41D6-882A-5FD4750073E5}</ProjectGuid>
+    <ProjectGuid>{F2AF9C51-D9FD-472B-B548-9382E2052951}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Exe</OutputType>
@@ -47,30 +47,40 @@
   <ItemGroup>
     <Compile Include="Alumno.cs" />
     <Compile Include="AlumnoAdapter.cs" />
-    <Compile Include="AlumnoDecorator.cs" />
-    <Compile Include="Cola.cs" />
-    <Compile Include="CompararDni.cs" />
-    <Compile Include="ConLegajo.cs" />
+    <Compile Include="AlumnoMuyEstudioso.cs" />
+    <Compile Include="Decorators\AlumnoDecorator.cs" />
+    <Compile Include="Decorators\AsteriscosDecorator.cs" />
+    <Compile Include="Decorators\CalificacionDecorator.cs" />
+    <Compile Include="Decorators\LegajoDecorator.cs" />
+    <Compile Include="Decorators\NotaDecorator.cs" />
     <Compile Include="Estrategias\CompararDni.cs" />
     <Compile Include="Estrategias\CompararLegajo.cs" />
     <Compile Include="Estrategias\CompararNombre.cs" />
     <Compile Include="Estrategias\CompararPromedio.cs" />
     <Compile Include="Estrategias\IEstrategiaComparacion.cs" />
+    <Compile Include="Fabricas\FabricaDeAlumnosMuyEstudiosos.cs" />
+    <Compile Include="Fabricas\FabricaDeComparables.cs" />
+    <Compile Include="Fabricas\FabricaDeProfesores.cs" />
+    <Compile Include="Fabricas\FabricasDeAlumnos.cs" />
+    <Compile Include="GeneradorDeDatosAleateorio.cs" />
     <Compile Include="IAlumno.cs" />
     <Compile Include="IColeccionable.cs" />
     <Compile Include="IComparable.cs" />
-    <Compile Include="IEstrategiaComparacion.cs" />
     <Compile Include="IIterable.cs" />
     <Compile Include="IIterador.cs" />
+    <Compile Include="IObservador.cs" />
     <Compile Include="IObsevado.cs" />
+    <Compile Include="IPersona.cs" />
     <Compile Include="IteradorLista.cs" />
     <Compile Include="MDPI.cs" />
-    <Compile Include="Persona.cs" />
+    <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Estrategias" />
+    <Folder Include="Fabricas" />
+    <Folder Include="Decorators" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -43,18 +43,18 @@ namespace Ejercicio4
 		}
 		public bool equals(Student student)
 		{
-			Alumno student = ((AlumnoAdapter)student).getAlumno();
-			return alu.SosIgual(student);
+			Alumno stu = ((AlumnoAdapter)student).getAlumno();
+			return alu.SosIgual(stu);
 		}
 		public bool lessThan(Student student)
 		{
-			Alumno student = ((AlumnoAdapter)student).getAlumno();
-			return alu.SosMenor(student);
+			Alumno stu = ((AlumnoAdapter)student).getAlumno();
+			return alu.SosMenor(stu);
 		}
 		public bool greaterThan(Student student)
 		{
-			Alumno student = ((AlumnoAdapter)student).getAlumno();
-			return alu.SosMayor(student);
+			Alumno stu = ((AlumnoAdapter)student).getAlumno();
+			return alu.SosMayor(stu);
 		}
 	}
 }

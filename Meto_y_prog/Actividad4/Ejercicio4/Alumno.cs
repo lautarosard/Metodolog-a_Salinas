@@ -19,6 +19,8 @@ namespace Ejercicio4
 		//constructor
 		public Alumno(string Nombre, int Dni, int Legajo, double Promedio)
 		{
+			this.nombre =Nombre;
+			this.dni = Dni;
 			this.Legajo = Legajo;
 			this.Promedio = Promedio;
 			this.Estrategia = new CompararDni();
@@ -99,7 +101,7 @@ namespace Ejercicio4
 		}
 		public void actualizar(IObservado o)
 		{
-			if(((Profesor)o).isHablando)
+			if(((Profesor)o).isHablando())
 			{
 				this.prestarAtencion();
 			}else

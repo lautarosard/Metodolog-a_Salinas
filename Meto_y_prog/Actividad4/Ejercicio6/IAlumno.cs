@@ -9,11 +9,12 @@ namespace Ejercicio6
 	public interface IAlumno:IComparable
 	{
 		//propiedades
-		string getnombre();
+		string Nombre{ get; }
+		int Legajo{ get; }
+		double Promedio{ get; }
+		int Dni{ get; }
+		int Calificacion{ get; set; }
 		//metodos
-		bool SosIgual(IComparable c);
-		bool SosMenor(IComparable c);
-		bool SosMayor(IComparable c);
 		void prestarAtencion();
 		void distraerse();
 		void actualizar(IObservado o);

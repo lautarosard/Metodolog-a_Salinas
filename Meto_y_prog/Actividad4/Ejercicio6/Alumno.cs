@@ -7,41 +7,49 @@ namespace Ejercicio6
 	/// <summary>
 	/// Subclase de Persona
 	/// </summary>
-	public class Alumno:Persona, IObservador, IAlumno
+	public class Alumno:IPersona, IObservador,IComparable,IAlumno
 	{
-		private int Legajo;
-		private double Promedio;
+		
+		private string nombre;
+		private int dni;
+		private int legajo;
+		private double promedio;
 		private int calificacion;
 		private IEstrategiaComparacion Estrategia;
 		//constructor
-		public Alumno(string Nombre, int Dni, int Legajo, double Promedio):base(Nombre, Dni)
+		public Alumno(string Nombre, int Dni, int Legajo, double Promedio)
 		{
+			this.nombre =Nombre;
+			this.dni = Dni;
 			this.Legajo = Legajo;
 			this.Promedio = Promedio;
 			this.Estrategia = new CompararDni();
 		}
 		//propiedades
-		public string getnombre()
+		public int Legajo
 		{
-			return this.Nombre;
+			get{return this.legajo;}
+			set{this.legajo = value;}
 		}
-		public int legajo
+		public double Promedio
 		{
-			get{return this.Legajo;}
-			set{this.Legajo = value;}
+			get{return this.promedio;}
+			set{this.promedio = value;}
 		}
-		public double promedio
-		{
-			get{return this.Promedio;}
-			set{this.Promedio = value;}
-		}
-		public int calificacion
+		public int Calificacion
 		{
 			get{return this.calificacion;}
 			set{this.calificacion = value;}
 		}
 		
-		
+		public string Nombre{
+			get{return nombre;}
+			set{this.nombre = value;}
+		}
+		public int Dni{
+			get{return dni;}
+			set{this.dni = value;}
+		}
 		public void SetEstrategia(IEstrategiaComparacion Estrategia)
 		{
 			this.Estrategia = Estrategia;
@@ -50,22 +58,22 @@ namespace Ejercicio6
 		//metodo para imprimir en forma de string un obj. Alumno
 		public override string ToString()
     	{
-         	return "Nombre: " + Nombre + " DNI: " + Dni + " Legajo: " + Legajo + " Promedio: " + Promedio;
+         	return "Nombre: " + Nombre + " DNI: " + Dni + " Legajo: " + Legajo + " Promedio: " + Promedio + "Calificación: " + calificacion;
     	}
 		//Reimplementación de metodos
-		public override bool SosIgual(IComparable C)
+		public bool SosIgual(IComparable C)
 		{
 			Alumno alu = (Alumno)C;
 			return Estrategia.sosIgual(this,alu);
 		}
 		
-		public override bool SosMenor(IComparable C)
+		public bool SosMenor(IComparable C)
 		{
 			Alumno alu = (Alumno)C;
 			return Estrategia.sosMenor(this,alu);
 		}
 		
-		public override bool SosMayor(IComparable C)
+		public bool SosMayor(IComparable C)
 		{
 			Alumno alu = (Alumno)C;
 			return Estrategia.sosMayor(this,alu);
@@ -93,7 +101,7 @@ namespace Ejercicio6
 		}
 		public void actualizar(IObservado o)
 		{
-			if(((Profesor)o).isHablando)
+			if(((Profesor)o).isHablando())
 			{
 				this.prestarAtencion();
 			}else
@@ -103,13 +111,13 @@ namespace Ejercicio6
 		}
 		public virtual int responderPregunta(int pregunta)
 		{
-			Random ram = new Random();
+			GeneradorDeDatosAleateorio not = new GeneradorDeDatosAleateorio();
 			int res;
-			return res= ram.Next(1,3);
+			return res= not.numeroAleatorio(3);
 		}
 		public string motrarCalificacion()
 		{
-			return this.Nombre + (String)this.promedio;
+			return this.Nombre +" "+ this.calificacion;
 		}
 	}
 }
