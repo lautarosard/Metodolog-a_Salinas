@@ -1,0 +1,5 @@
+C:\Users\lauta\OneDrive\Documentos\SharpDevelop Projects\Actividad5\Actividad5\bin\Debug\Actividad5.exe
+C:\Users\lauta\OneDrive\Documentos\SharpDevelop Projects\Actividad5\Actividad5\bin\Debug\Actividad5.pdb
+C:\Users\lauta\OneDrive\Documentos\SharpDevelop Projects\Actividad5\Actividad5\obj\Debug\Actividad5.csprojResolveAssemblyReference.cache
+C:\Users\lauta\OneDrive\Documentos\SharpDevelop Projects\Actividad5\Actividad5\obj\Debug\Actividad5.exe
+C:\Users\lauta\OneDrive\Documentos\SharpDevelop Projects\Actividad5\Actividad5\obj\Debug\Actividad5.pdb
