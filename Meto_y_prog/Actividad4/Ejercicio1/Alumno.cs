@@ -12,15 +12,19 @@ namespace Ejercicio1
 		private int Legajo;
 		private double Promedio;
 		private IEstrategiaComparacion Estrategia;
+		
+		//CONSTRUCTOR
 		public Alumno(string Nombre, int Dni, int Legajo, double Promedio):base(Nombre, Dni)
 		{
 			this.Legajo = Legajo;
 			this.Promedio = Promedio;
 			this.Estrategia = new CompararDni();
 		}
+		//PROPIEDADES			
 		public int legajo
 		{
 			get{return this.Legajo;}
+			
 			set{this.Legajo = value;}
 		}
 		public double promedio

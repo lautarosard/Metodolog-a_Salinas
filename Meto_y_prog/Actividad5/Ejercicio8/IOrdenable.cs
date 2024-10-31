@@ -1,8 +1,4 @@
-﻿/*
- * User: lauta
- * Date: 28/9/2024
- */
-using System;
+﻿using System;
 
 namespace Ejercicio8
 {
@@ -11,8 +7,8 @@ namespace Ejercicio8
 	/// </summary>
 	public interface IOrdenable
 	{
-		setOrdenInicio(OrdenEnAula1);
-		setOrdenLlegaAlumno(OrdenEnAula2);
-		setOrdenAulaLlena(OrdenEnAula1);
+		setOrdenInicio(OrdenEnAula1 OA1);
+		setOrdenLlegaAlumno(OrdenEnAula2 OA2);
+		setOrdenAulaLlena(OrdenEnAula1 OA1);
 	}
 }

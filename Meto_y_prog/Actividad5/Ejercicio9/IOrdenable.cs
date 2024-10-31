@@ -11,8 +11,8 @@ namespace Ejercicio9
 	/// </summary>
 	public interface IOrdenable
 	{
-		setOrdenInicio(OrdenEnAula1);
-		setOrdenLlegaAlumno(OrdenEnAula2);
-		setOrdenAulaLlena(OrdenEnAula1);
+		setOrdenInicio(OrdenEnAula1 aula);
+		setOrdenLlegaAlumno(OrdenEnAula2 aula);
+		setOrdenAulaLlena(OrdenEnAula1 aula);
 	}
 }

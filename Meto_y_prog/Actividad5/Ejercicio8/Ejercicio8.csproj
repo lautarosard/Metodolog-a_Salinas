@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IOrdenable.cs" />
+    <Compile Include="OrdenEnAula1.cs" />
+    <Compile Include="OrdenEnAula2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
