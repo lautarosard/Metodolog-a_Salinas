@@ -45,8 +45,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno.cs" />
+    <Compile Include="AlumnoAdapter.cs" />
+    <Compile Include="AlumnoMuyEstudioso.cs" />
+    <Compile Include="Aula.cs" />
+    <Compile Include="Colecciones\Cola.cs" />
+    <Compile Include="Colecciones\IteradorLista.cs" />
+    <Compile Include="Colecciones\Pila.cs" />
+    <Compile Include="Estrategias\CompararDni.cs" />
+    <Compile Include="Estrategias\CompararLegajo.cs" />
+    <Compile Include="Estrategias\CompararNombre.cs" />
+    <Compile Include="Estrategias\CompararPromedio.cs" />
+    <Compile Include="Estrategias\IEstrategiaComparacion.cs" />
+    <Compile Include="Fabricas\FabricaDeAlumnosMuyEstudiosos.cs" />
+    <Compile Include="Fabricas\FabricaDeComparables.cs" />
+    <Compile Include="Fabricas\FabricaDeProfesores.cs" />
+    <Compile Include="Fabricas\FabricasDeAlumnos.cs" />
+    <Compile Include="Fabricas\GeneradorDeDatosAleateorio.cs" />
+    <Compile Include="Interfaces\IAlumno.cs" />
+    <Compile Include="Interfaces\IColeccionable.cs" />
+    <Compile Include="Interfaces\IComparable.cs" />
+    <Compile Include="Interfaces\IIterable.cs" />
+    <Compile Include="Interfaces\IIterador.cs" />
+    <Compile Include="Interfaces\IObservador.cs" />
+    <Compile Include="Interfaces\IObsevado.cs" />
+    <Compile Include="Interfaces\IOrdenable.cs" />
+    <Compile Include="Interfaces\IPersona.cs" />
+    <Compile Include="Interfaces\OrdenEnAula1.cs" />
+    <Compile Include="Interfaces\OrdenEnAula2.cs" />
+    <Compile Include="MDPI.cs" />
+    <Compile Include="Ordenable\OrdenAulaLlena.cs" />
+    <Compile Include="Ordenable\OrdenInicio.cs" />
+    <Compile Include="Ordenable\OrdenLlegaAlumno.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Estrategias" />
+    <Folder Include="Fabricas" />
+    <Folder Include="Interfaces" />
+    <Folder Include="Colecciones" />
+    <Folder Include="Ordenable" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
