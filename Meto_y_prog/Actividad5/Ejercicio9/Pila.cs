@@ -6,17 +6,46 @@ namespace Ejercicio9
 	public class Pila:IColeccionable, IIterable, IOrdenable
 	{
 		private List<IComparable> Datos;
-		private OrdenEnAula1 ordenInicio = null,ordenAulaLlena = null;
+		private OrdenEnAula1 ordenInicio = null
+		private OrdenEnAula1 ordenAulaLlena = null;
 		private OrdenEnAula2 ordenLlegaAlumno = null;
 		public Pila()
 		{
 			this.Datos = new List<IComparable>();
 		}
+		//Metodos Command
+		public void setOrdenInicio(OrdenEnAula1 aula)
+		{
+			this.ordenInicio = aula;
+		}
+		public void setOrdenLlegaAlumno(OrdenEnAula2 Al)
+		{
+			this.ordenLlegaAlumno = Al;
+		}
+		public void setOrdenAulaLlena(OrdenEnAula1 aula)
+		{
+			this.ordenAulaLlena = aula;
+		}
 		//metodos
 	
 		public void Apilar (IComparable d)
-		{
+		{//modificado para IOrdenable
 			Datos.Add(d);
+			if(this.Cuantos()==1)
+			{
+				if(!ordenInicio==null)
+				{
+					ordenInicio.ejecutar();
+				}
+			}
+			if(!ordenAlumno==null)
+			{
+				ordenAlumno.ejecutar(elem);
+			}
+			if(this.Cuantos() == 40)
+			{
+				ordenFin.ejecutar();
+			}
 		}
 		
 		public IComparable Desapilar()
@@ -90,12 +119,6 @@ namespace Ejercicio9
 		{
 			return new IteradorLista(Datos);
 		}
-		//
-		public void setOrdenInicio(OrdenEnAula1 o)
-		{
-			ordenInicio = 0;
-		}
-		void setOrdenLlegaAlumno(OrdenEnAula2);
-		void setOrdenAulaLlena(OrdenEnAula1);
+		
 	}
 }

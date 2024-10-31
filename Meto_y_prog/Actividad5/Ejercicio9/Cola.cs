@@ -104,7 +104,7 @@ namespace Ejercicio9
 			}
 			if(!ordenAlumno==null)
 			{
-				ordenAlumno.ejecutar();
+				ordenAlumno.ejecutar(elem);
 			}
 			if(this.Cuantos() == 40)
 			{
