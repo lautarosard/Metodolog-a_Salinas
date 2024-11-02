@@ -11,6 +11,6 @@ namespace Ejercicio10
 	/// </summary>
 	public interface OrdenEnAula2
 	{
-		void ejecutar(IComparable);
+		void ejecutar(AlumnoAdapter alu);
 	}
 }

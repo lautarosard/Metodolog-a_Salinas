@@ -48,6 +48,7 @@
     <Compile Include="Alumno.cs" />
     <Compile Include="AlumnoAdapter.cs" />
     <Compile Include="AlumnoMuyEstudioso.cs" />
+    <Compile Include="AlumnoProxy.cs" />
     <Compile Include="Aula.cs" />
     <Compile Include="Colecciones\Cola.cs" />
     <Compile Include="Colecciones\IteradorLista.cs" />
@@ -58,7 +59,10 @@
     <Compile Include="Estrategias\CompararPromedio.cs" />
     <Compile Include="Estrategias\IEstrategiaComparacion.cs" />
     <Compile Include="Fabricas\FabricaDeAlumnosMuyEstudiosos.cs" />
+    <Compile Include="Fabricas\FabricaDeColas.cs" />
+    <Compile Include="Fabricas\FabricaDeColecciones.cs" />
     <Compile Include="Fabricas\FabricaDeComparables.cs" />
+    <Compile Include="Fabricas\FabricaDePilas.cs" />
     <Compile Include="Fabricas\FabricaDeProfesores.cs" />
     <Compile Include="Fabricas\FabricasDeAlumnos.cs" />
     <Compile Include="Fabricas\GeneradorDeDatosAleateorio.cs" />
@@ -77,6 +81,7 @@
     <Compile Include="Ordenable\OrdenAulaLlena.cs" />
     <Compile Include="Ordenable\OrdenInicio.cs" />
     <Compile Include="Ordenable\OrdenLlegaAlumno.cs" />
+    <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

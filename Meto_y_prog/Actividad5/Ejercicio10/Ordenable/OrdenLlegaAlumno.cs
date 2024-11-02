@@ -18,9 +18,9 @@ namespace Ejercicio10
 			this.aula = aula;
 		}
 		//
-		public void ejecutar(IComparable comparable)
+		public void ejecutar(AlumnoAdapter alu)
 		{
-			aula.nuevoAlumno(comparable);
+			aula.nuevoAlumno(alu);
 		}
 	}
 }

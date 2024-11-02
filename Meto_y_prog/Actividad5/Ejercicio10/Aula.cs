@@ -4,7 +4,7 @@
  */
 using System;
 
-namespace Ejercicio7
+namespace Ejercicio10
 {
 	/// <summary>
 	/// Description of Aula.
@@ -22,7 +22,7 @@ namespace Ejercicio7
 			Console.WriteLine("Comienza la clase");
 			teacher= new Teacher();
 		}
-		public void nuevoAlumno(IAlumno alumno)
+		public void nuevoAlumno(AlumnoAdapter alumno)
 		{
 			teacher.goToClass(alumno);
 			//agrega alu a con goToClass

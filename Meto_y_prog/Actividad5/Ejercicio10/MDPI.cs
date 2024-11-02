@@ -11,7 +11,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Ejercicio7
+namespace Ejercicio10
 {
 	public interface Student
 	{

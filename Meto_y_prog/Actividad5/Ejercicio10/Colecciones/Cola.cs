@@ -13,7 +13,7 @@ namespace Ejercicio10
 {
 	public class Cola:IColeccionable, IIterable, IOrdenable
 	{
-		private List<IComparable> Datos;
+		private List<AlumnoAdapter> Datos;
 		private OrdenEnAula1 ordenInicio=null;
 		private OrdenEnAula1 ordenFin=null;
 		private OrdenEnAula2 ordenAlumno=null;
@@ -21,7 +21,7 @@ namespace Ejercicio10
 		//constructor	
 		public Cola()
 		{
-			 Datos = new List<IComparable>();
+			 Datos = new List<AlumnoAdapter>();
 		}
 		//metodos Icollec
 		
@@ -30,12 +30,12 @@ namespace Ejercicio10
 			return this.CantidadElementos();
 		}
 		
-		public IComparable Minimo()
+		public AlumnoAdapter Minimo()
 		{
-			IComparable min = Datos[0];
-			foreach (IComparable com in Datos)
+			AlumnoAdapter min = Datos[0];
+			foreach (AlumnoAdapter com in Datos)
 			{
-				if (min.SosMayor(com))
+				if (min.greaterThan(com))
 				{
 					min=com;
 				}
@@ -43,12 +43,12 @@ namespace Ejercicio10
 			return min;
 		}
 		
-		public IComparable Maximo()
+		public AlumnoAdapter Maximo()
 		{
-			IComparable max = Datos[0];
-			foreach (IComparable com in Datos)
+			AlumnoAdapter max = Datos[0];
+			foreach (AlumnoAdapter com in Datos)
 			{
-				if (max.SosMenor(com))
+				if (max.lessThan(com))
 				{
 					max = com;
 				}
@@ -56,17 +56,17 @@ namespace Ejercicio10
 			return max;
 		}
 		
-		public void Agregar(IComparable m)
+		public void Agregar(AlumnoAdapter m)
 		{
 			this.Encolar(m);
 			
 		}
 		
-		public bool Contiene(IComparable m)
+		public bool Contiene(AlumnoAdapter m)
 		{
-			foreach (IComparable com in Datos)
+			foreach (AlumnoAdapter com in Datos)
 			{
-				if (com.SosIgual(m))
+				if (com.equals(m))
 				{
 					return true;
 				}
@@ -92,17 +92,17 @@ namespace Ejercicio10
 			this.ordenFin = aula;
 		}
 		//Metodos
-		private void Encolar (IComparable elem)
+		private void Encolar (AlumnoAdapter elem)
 		{
 			this.Datos.Add(elem);
 			if(this.Cuantos()==1)
 			{
-				if(!ordenInicio==null)
+				if(ordenInicio!=null)
 				{
 					ordenInicio.ejecutar();
 				}
 			}
-			if(!ordenAlumno==null)
+			if(ordenAlumno!=null)
 			{
 				ordenAlumno.ejecutar(elem);
 			}
@@ -112,7 +112,7 @@ namespace Ejercicio10
 			}
 		}
 		
-		public IComparable Desencolar()
+		public AlumnoAdapter Desencolar()
 		{
 			if(EsVacia())
 			{
@@ -120,13 +120,13 @@ namespace Ejercicio10
 				throw new InvalidOperationException("La cola está vacía.");	
 			}
 			else{
-				IComparable temp = this.Datos[0];
+				AlumnoAdapter temp = this.Datos[0];
 				this.Datos.RemoveAt(0);
 				return temp;
 			}
 		}
 		
-		public IComparable Tope()
+		public AlumnoAdapter Tope()
 		{
 			if(EsVacia()){
 			

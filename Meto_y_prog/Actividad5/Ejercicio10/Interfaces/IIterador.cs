@@ -14,6 +14,6 @@ namespace Ejercicio10
 		void primero();
 		void siguiente();
 		bool fin();
-		IComparable actual();
+		AlumnoAdapter actual();
 	}
 }

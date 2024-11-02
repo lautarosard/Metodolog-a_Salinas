@@ -12,10 +12,10 @@ namespace Ejercicio10
 	/// </summary>
 	public class IteradorLista:IIterador
 	{
-		private List<IComparable> elementos;
+		private List<AlumnoAdapter> elementos;
 		private int indice;
 		
-		public IteradorLista(List<IComparable> elementos)
+		public IteradorLista(List<AlumnoAdapter> elementos)
 		{
 			this.elementos = elementos;
 			primero();
@@ -34,7 +34,7 @@ namespace Ejercicio10
 		{
 			return elementos.Count == indice;
 		}
-		public IComparable actual()
+		public AlumnoAdapter actual()
 		{
 			return elementos[indice];
 		}

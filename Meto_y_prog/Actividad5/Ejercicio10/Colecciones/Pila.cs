@@ -5,13 +5,13 @@ namespace Ejercicio10
 {
 	public class Pila:IColeccionable, IIterable, IOrdenable
 	{
-		private List<IComparable> Datos;
-		private OrdenEnAula1 ordenInicio = null
+		private List<AlumnoAdapter> Datos;
+		private OrdenEnAula1 ordenInicio = null;
 		private OrdenEnAula1 ordenAulaLlena = null;
 		private OrdenEnAula2 ordenLlegaAlumno = null;
 		public Pila()
 		{
-			this.Datos = new List<IComparable>();
+			this.Datos = new List<AlumnoAdapter>();
 		}
 		//Metodos Command
 		public void setOrdenInicio(OrdenEnAula1 aula)
@@ -28,29 +28,29 @@ namespace Ejercicio10
 		}
 		//metodos
 	
-		public void Apilar (IComparable d)
+		public void Apilar (AlumnoAdapter d)
 		{//modificado para IOrdenable
 			Datos.Add(d);
 			if(this.Cuantos()==1)
 			{
-				if(!ordenInicio==null)
+				if(ordenInicio!=null)
 				{
 					ordenInicio.ejecutar();
 				}
 			}
-			if(!ordenAlumno==null)
+			if(ordenLlegaAlumno!=null)
 			{
-				ordenAlumno.ejecutar(elem);
+				ordenLlegaAlumno.ejecutar(d);
 			}
 			if(this.Cuantos() == 40)
 			{
-				ordenFin.ejecutar();
+				ordenAulaLlena.ejecutar();
 			}
 		}
 		
-		public IComparable Desapilar()
+		public AlumnoAdapter Desapilar()
 		{
-			IComparable aux = Datos[Datos.Count - 1];
+			AlumnoAdapter aux = Datos[Datos.Count - 1];
 			Datos.RemoveAt(-1);
 			return aux;
 		}
@@ -61,24 +61,24 @@ namespace Ejercicio10
 			return Datos.Count;
 		}
 		
-		public IComparable Minimo()
+		public AlumnoAdapter Minimo()
 		{
-			IComparable min = Datos[0];
-			foreach (IComparable com in Datos)
+			AlumnoAdapter min = Datos[0];
+			foreach (AlumnoAdapter com in Datos)
 			{
-				if (min.SosMayor(com))
+				if (min.greaterThan(com))
 				{
 					min=com;
 				}
 			}
 			return min;
 		}
-		public IComparable Maximo()
+		public AlumnoAdapter Maximo()
 		{
-			IComparable max = Datos[0];
-			foreach (IComparable com in Datos)
+			AlumnoAdapter max = Datos[0];
+			foreach (AlumnoAdapter com in Datos)
 			{
-				if (max.SosMenor(com))
+				if (max.lessThan(com))
 				{
 					max = com;
 				}
@@ -86,29 +86,17 @@ namespace Ejercicio10
 			return max;
 		}
 		
-		public void Agregar(IComparable m)
+		public void Agregar(AlumnoAdapter m)
 		{
 			this.Apilar(m);
-			if(Cuantos() == 1 && ordenInicio!=null)
-			{
-				ordenInicio.ejecutar();
-				if(ordenLlegaAlumno != null)
-					{
-						ordenLlegaAlumno.ejecutar();
-						if(Cuantos()==40 && ordenAulaLlena != null)
-						{
-							ordenAulaLlena.ejecutar();
-						}
-					}
-			}
 			
 		}
 		
-		public bool Contiene(IComparable m)
+		public bool Contiene(AlumnoAdapter m)
 		{
-			foreach (IComparable com in Datos)
+			foreach (AlumnoAdapter com in Datos)
 			{
-				if (com.SosIgual(m))
+				if (com.equals(m))
 				{
 					return true;
 				}

@@ -6,9 +6,9 @@ namespace Ejercicio10
 	public interface IColeccionable
 	{
 		int Cuantos();
-		IComparable Minimo();
-		IComparable Maximo();
-		void Agregar(IComparable c);
-		bool Contiene(IComparable c);
+		AlumnoAdapter Minimo();
+		AlumnoAdapter Maximo();
+		void Agregar(AlumnoAdapter c);
+		bool Contiene(AlumnoAdapter c);
 	}
 }
