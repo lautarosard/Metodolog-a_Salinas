@@ -34,7 +34,9 @@ namespace Ejercicio10
 					IAlumno stuAdapt = new AlumnoProxy(gen.stringAleatorio(6),1);
 					if (stuAdapt !=null)
 					{
-						AlumnoAdapter student= new AlumnoAdapter(stuAdapt);
+						IAlumno decoNota= new NotaDecorator(stuAdapt);
+						IAlumno decoCali = new CalificacionDecorator(decoNota);
+						AlumnoAdapter student= new AlumnoAdapter(decoCali);
 						coleccion.Agregar(student);
 					}
 					
@@ -43,7 +45,9 @@ namespace Ejercicio10
 					IAlumno stuAdapt = new AlumnoProxy(gen.stringAleatorio(6),3);
 					if (stuAdapt != null)
 					{
-						AlumnoAdapter student= new AlumnoAdapter(stuAdapt);
+						IAlumno decoNota= new NotaDecorator(stuAdapt);
+						IAlumno decoCali = new CalificacionDecorator(decoNota);
+						AlumnoAdapter student= new AlumnoAdapter(decoCali);
 						coleccion.Agregar(student);
 					}
 				}

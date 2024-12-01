@@ -21,6 +21,7 @@ namespace Ejercicio10
 		public string Nombre
 		{
 			get{return adicional.Nombre;}
+			set{adicional.Nombre = value;}
 		}
 		public int Dni
 		{
@@ -68,9 +69,9 @@ namespace Ejercicio10
 		{
 			return adicional.responderPregunta(pregunta);
 		}
-		public virtual string motrarCalificacion()
+		public virtual string mostrarCalificacion()
 		{
-			return adicional.motrarCalificacion();
+			return adicional.mostrarCalificacion();
 		}
 	}
 }

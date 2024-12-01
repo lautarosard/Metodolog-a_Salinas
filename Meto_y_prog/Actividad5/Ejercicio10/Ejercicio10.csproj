@@ -53,6 +53,9 @@
     <Compile Include="Colecciones\Cola.cs" />
     <Compile Include="Colecciones\IteradorLista.cs" />
     <Compile Include="Colecciones\Pila.cs" />
+    <Compile Include="Decorator\AlumnoDecorator.cs" />
+    <Compile Include="Decorator\CalificacionDecorator.cs" />
+    <Compile Include="Decorator\NotaDecorator.cs" />
     <Compile Include="Estrategias\CompararDni.cs" />
     <Compile Include="Estrategias\CompararLegajo.cs" />
     <Compile Include="Estrategias\CompararNombre.cs" />
@@ -90,6 +93,7 @@
     <Folder Include="Fabricas" />
     <Folder Include="Interfaces" />
     <Folder Include="Colecciones" />
+    <Folder Include="Decorator" />
     <Folder Include="Ordenable" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
